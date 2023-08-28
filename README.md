@@ -1,8 +1,8 @@
-# Advocacy Workshop
+# watsonx chatbot course
 
-This is a template for workshops hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
+This is the watsonx chatbot course hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
 
-<https://ibm.github.io/repo-name>
+<https://ibm.github.io/watsonx-chatbot-course>
 
 Create a new repo based off this template, and use the following folders as a guide:
 
