@@ -1,8 +1,8 @@
 # Introduction
 
-## watsonx-chatbot-course
+## watsonx-chatbot-lab
 
-Welcome to our workshop! In this workshop we'll be using [watsonx][watsonx] to accomplish build a chatbot in less then an hour!.
+Welcome to our workshop! In this workshop we'll be using [watsonx][watsonx] to accomplish build a chatbot in less then an hour!
 
 The goals of this workshop are:
 
@@ -10,7 +10,7 @@ The goals of this workshop are:
 * Learning about IBM Cloud.
 * Understanding why AI is our future.
 
-### About this workshop
+### About these labs
 
 The introductory page of the workshop is broken down into the following sections:
 
@@ -35,5 +35,7 @@ The introductory page of the workshop is broken down into the following sections
 
 ## Credits
 
-TBD
-* [Full Name](https://github.com/githubid)
+* [JJ Asghar](https://github.com/jjasghar)
+* James Walsh
+* Blake McGregor
+* Peter Keller
