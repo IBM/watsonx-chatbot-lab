@@ -33,7 +33,8 @@ Simply put, steps represent the clarification questions, final answers, or human
 Everything else that the step needs to function like the flow logic, response options, or storage of the user’s response is contained within the structure of the action itself. You no longer need to create separate entities and intents as part of a dialog skill!
 In the example above, the assistant asks clarification questions before handing the conversation over to an agent (with the account number as context) to pay a cable bill, or guides the user to the online billing portal for internet or phone bills.
 
-**Pro tip**: If you’re an existing Watson Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.
+!!! tip
+    If you’re an existing Watson Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.
 
 ## 2. Create your first assistant (5 min)
 When you first launch the new experience, you’ll be prompted to create your first assistant:
@@ -42,7 +43,8 @@ When you first launch the new experience, you’ll be prompted to create your fi
 
 Give it a name that represents the domain of topics you want it to handle. For example, if you are building an assistant to handle support questions in your billing department, you might start by calling it the “Billing Assistant.” Choose what language you want it to speak before continuing. Watson Assistant can handle virtually any global language.
 
-**Pro tip**: If you haven’t already thought about what you want your assistant to handle or where it will talk to your customers, check out our post on planning your assistant. You can also take advantage of one of the templates in our catalog for your first assistant. This will dramatically reduce your timeline, as well as teach you the ropes.
+!!! tip
+    If you haven’t already thought about what you want your assistant to handle or where it will talk to your customers, check out our post on planning your assistant. You can also take advantage of one of the templates in our catalog for your first assistant. This will dramatically reduce your timeline, as well as teach you the ropes.
 From here, you’ll start on the home page of your brand-new assistant:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture9.png)
@@ -68,7 +70,8 @@ Let’s build it!
 
 Start by creating your first action. Remember that actions represent the topics your assistant can handle, such as “pay bill.”
 
-**Pro tip**: You will be prompted to create your first action from scratch or from a template. To follow along with our example you’ll want to choose the first option, but we definitely recommend exploring the templates at your disposal as you build out your proof of concept. You’ll find a number of options that are customer-ready, or that can expand on your first assistant’s abilities.
+!!! tip
+    You will be prompted to create your first action from scratch or from a template. To follow along with our example you’ll want to choose the first option, but we definitely recommend exploring the templates at your disposal as you build out your proof of concept. You’ll find a number of options that are customer-ready, or that can expand on your first assistant’s abilities.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture11-1.png)
 
@@ -152,7 +155,8 @@ We should, however, set up the assistant to route this conversation to a human a
 
 In the prompt that comes up, you should insert the context that you gathered for the human agent to review. Namely, the fact that the customer wants to pay their cable bill as well as the account number.
 
-**Pro tip**: To insert the information To insert information you’ve collected into text, start with the **$** sign, and a quick select box should appear like this:
+!!! tip
+    To insert the information To insert information you’ve collected into text, start with the **$** sign, and a quick select box should appear like this:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture28.png)
 
@@ -204,7 +208,8 @@ You may notice when testing that the assistant doesn’t correctly recognize eve
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture38.png)
 
-**Pro tip**: While you’re at it, we recommend naming your action (top left of the image above) with something simple that your customers would recognize. In this case, maybe something like “Pay a bill.”
+!!! tip
+    While you’re at it, we recommend naming your action (top left of the image above) with something simple that your customers would recognize. In this case, maybe something like “Pay a bill.”
 
 ## 4. Preview your assistant (5 min)
 To see how your assistant would work on one of your channels, head to the preview page:

@@ -95,7 +95,8 @@ When you’re ready to launch your assistant on your website, it’s literally a
 
 You’ll see the JavaScript code snippet you’ll need to integrate your assistant into your website. Click the copy icon next to the script, open the HTML source for any page on your website, and paste the snippet in.
 
-**Pro Tip**: Paste the snippet as close to the closing **</body>** tag as possible to ensure that your page renders as fast as possible. Refer to the documentation for the new Watson Assistant to get the deepest dive possible on deploying your assistant to your website.
+!!! tip
+    Paste the snippet as close to the closing **</body>** tag as possible to ensure that your page renders as fast as possible. Refer to the documentation for the new Watson Assistant to get the deepest dive possible on deploying your assistant to your website.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture11.jpg)
 
