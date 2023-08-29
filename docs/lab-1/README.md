@@ -164,7 +164,7 @@ Step 3 should be complete and look like this:
 
 ### Create a final response step
 
-Lastly, add step 4. It should say something like: **To pay your \<type of bill\> bill, you can head to our online portal \<link to portal\>**
+Lastly, add step 4. It should say something like: **To pay your <type of bill> bill, you can head to our online portal <link to portal>**
 
 To insert a variable like the type of bill being paid, click the variable insert button at the top of the text box:
 

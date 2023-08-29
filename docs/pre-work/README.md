@@ -19,6 +19,6 @@ Various parts of this workshop will require the attendee to upload files or run 
 Alternately, run the following command:
 
 ```bash
-git clone https://github.com/IBM/watsonx-chatbot-course
-cd watsonx-chatbot-course
+git clone https://github.com/IBM/watsonx-chatbot-lab
+cd watsonx-chatbot-lab
 ```
