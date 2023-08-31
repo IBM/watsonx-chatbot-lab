@@ -2,7 +2,7 @@
 
 ## watsonx-chatbot-lab
 
-Welcome to our workshop! In this workshop we'll be using [watsonx][watsonx] to accomplish build a chatbot in less then an hour!
+Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish build a chatbot in less then an hour!
 
 The goals of this workshop are:
 
@@ -39,3 +39,5 @@ The introductory page of the workshop is broken down into the following sections
 * James Walsh
 * Blake McGregor
 * Peter Keller
+
+[watsonx]: https://watsonx.ai
