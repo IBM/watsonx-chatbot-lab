@@ -40,4 +40,4 @@ The introductory page of the workshop is broken down into the following sections
 * Blake McGregor
 * Peter Keller
 
-[watsonx]: https://watsonx.ai
+[watsonx]: https://ibm.biz/dev-watsonx
