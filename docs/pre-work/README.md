@@ -13,7 +13,7 @@ Ensure you have an IBM Cloud ID
 
 ## 2. Download or clone the repo
 
-Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. So let's get that done early on, you'll need [`git`](https://git-scm.com) on your laptop to clone the repository directly, or access to [GitHub.com](https://github.com/) to download the zip file.
+Download the repo so that you can have code for reference. So let's get that done early on, you'll need [`git`](https://git-scm.com) on your laptop to clone the repository directly, or access to [GitHub.com](https://github.com/) to download the zip file.
 
 
 Alternately, run the following command:
