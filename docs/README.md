@@ -2,7 +2,7 @@
 
 ## watsonx-chatbot-lab
 
-Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish build a chatbot in less then an hour!
+Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish building a chatbot in less then an hour!
 
 The goals of this workshop are:
 
