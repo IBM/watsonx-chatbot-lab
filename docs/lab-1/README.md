@@ -37,7 +37,7 @@ In the example above, the assistant asks clarification questions before handing 
     If you’re an existing Watson Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.
 
 ## 2. Create your first assistant (5 min)
-When you first launch the new experience, you’ll be prompted to create your first assistant:
+When you first launch the new Watson Assistant experience, you’ll be prompted to create your first assistant:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture8-1.png)
 
