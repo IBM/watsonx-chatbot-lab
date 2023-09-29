@@ -2,7 +2,7 @@
 
 ## watsonx-chatbot-lab
 
-Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish building an AI powered chatbot in less then an hour!
+Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx" data-goatcounter-click="counter.asgharlabs.io">watsonx</a> to accomplish building an AI-powered chatbot in less than an hour!
 
 The goals of this workshop are:
 
@@ -38,7 +38,5 @@ The introductory page of the workshop is broken down into the following sections
 * James Walsh
 * Blake McGregor
 * Peter Keller
-
-[watsonx]: https://ibm.biz/dev-watsonx
 
 <img src="https://count.asgharlabs.io/count?p=/main_chatbot_page">
