@@ -24,6 +24,9 @@ nav:
     - MkDocs Cheatsheet: resources/MKDOCS.md
     - Admin Guide: resources/ADMIN.md
 
+extra_javascript:
+  - https://count.asgharlabs.io/count.js
+
 ## DO NOT CHANGE BELOW THIS LINE
 
 # Copyright
