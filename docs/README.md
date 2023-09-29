@@ -1,6 +1,3 @@
-<script data-goatcounter="https://count.asgharlabs.io/count"
-        async src="//count.asgharlabs.io/count.js"></script>
-
 # Introduction
 
 ## watsonx-chatbot-lab
@@ -43,3 +40,5 @@ The introductory page of the workshop is broken down into the following sections
 * James Walsh
 * Blake McGregor
 * Peter Keller
+
+<img src="https://count.asgharlabs.io/count?p=/main_chatbot_page">
