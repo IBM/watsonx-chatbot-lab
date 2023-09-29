@@ -1,6 +1,6 @@
 # Deploying watsonx assistant
 
-You built your first action with Watson Assistant in Lab 1, then refined your content in Lab 2. Now let’s learn how to test your assistant and deploy it on your website!
+You built your first action with watsonx Assistant in Lab 1, then refined your content in Lab 2. Now let’s learn how to test your assistant and deploy it on your website!
 
 ## Publish and preview your assistant’s content
 
@@ -20,7 +20,7 @@ The left-right navigation has three key links:
 
 Your colleagues are your best resource for refining your assistant’s content: they know the business, your customers’ pain points, and what questions most frequently need answering.
 
-### Best practices we’ve identified for testing your assistant:
+### Best practices we’ve identified for testing your assistant
 
 - Send the preview link to 10-15 colleagues
 - Don’t invite anybody who was part of the building process
@@ -38,7 +38,7 @@ You can review the details of each conversation in the **Conversations** tab of 
 
 ## Customize the web chat
 
-The web chat channel integration is automatically included with every instance of Watson Assistant. Click **Customize web chat** on the Preview page or select Web chat on the home page to open the web chat editor.
+The web chat channel integration is automatically included with every instance of watsonx Assistant. Click **Customize web chat** on the Preview page or select Web chat on the home page to open the web chat editor.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2022/01/2022-07-27_10-22-41-1.gif)
 
@@ -89,14 +89,14 @@ To assign V2 to the live environment, go to your **Environments** page, click **
 
 Again, every time you publish a version of your assistant, you create a snapshot of your current content. The version assigned to the live environment will be the one your customers interact with, and any new content you add to your assistant will be saved in the draft environment until you’re ready to publish it as a version.
 
-### 2. Deploy your assistant on a live channel across a broader set of customers.
+### 2. Deploy your assistant on a live channel across a broader set of customers
 
 When you’re ready to launch your assistant on your website, it’s literally as easy as copy and paste! Return to the web chat editor and click the **Embed** tab.
 
 You’ll see the JavaScript code snippet you’ll need to integrate your assistant into your website. Click the copy icon next to the script, open the HTML source for any page on your website, and paste the snippet in.
 
 !!! tip
-    Paste the snippet as close to the closing **</body>** tag as possible to ensure that your page renders as fast as possible. Refer to the documentation for the new Watson Assistant to get the deepest dive possible on deploying your assistant to your website.
+    Paste the snippet as close to the closing **\</body\>** tag as possible to ensure that your page renders as fast as possible. Refer to the documentation for the new Watson Assistant to get the deepest dive possible on deploying your assistant to your website.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture11.jpg)
 

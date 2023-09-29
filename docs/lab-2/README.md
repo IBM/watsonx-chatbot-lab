@@ -16,6 +16,7 @@ The first step in refining your assistant is personalizing how it greets custome
 Go to your **Actions** menu and click **Set by assistant** (under all items), then on **Greet customer**, then on the first **Conversation steps** box where you can edit the greeting to make it your own.
 
 Some things to consider:
+
 - Give your assistant a name that reflects your business
 - Choose a greeting that describes your assistant’s purpose
 - Settle on a greeting that satisfies any number of customer scenarios. For our purposes:
@@ -127,6 +128,7 @@ Finally, here’s what this example conversation would look like.
 If the assistant can’t offer the customer their desired solution, the customer may rely on your assistant’s built-in **fallback action**. Watson Assistant’s fallback action is preset to escalate to a live agent.
 
 Your assistant will use the fallback action in three situations:
+
 - **Agent requested** – triggered when the customer asks outright to speak to a live agent
 - **Step validation failed** – triggered when the user can’t understand the customer’s request (covered above)
 - **No action matches** – if you decide to forgo retry and skip directly to live agent support in your flow

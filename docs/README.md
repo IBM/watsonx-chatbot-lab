@@ -2,7 +2,7 @@
 
 ## watsonx-chatbot-lab
 
-Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish building a chatbot in less then an hour!
+Welcome to our lab! In this lab we'll be using [watsonx][watsonx] to accomplish building an AI powered chatbot in less then an hour!
 
 The goals of this workshop are:
 
@@ -14,9 +14,9 @@ The goals of this workshop are:
 
 The introductory page of the workshop is broken down into the following sections:
 
-* [Agenda](./#agenda)
-* [Technology Used](./#technology-used)
-* [Credits](./#credits)
+* [Agenda](#agenda)
+* [Technology Used](#technology-used)
+* [Credits](#credits)
 
 ## Agenda
 
@@ -27,11 +27,10 @@ The introductory page of the workshop is broken down into the following sections
 | [Lab 2: Refining watsonx assistant](lab-2/README.md) | Refining your Watson Assistant |
 | [Lab 3: Deploying your watsonx assistant](lab-2/README.md) | Deploying your Watson Assistant |
 
-
 ## Technology Used
 
-* IBM Cloud
-* watsonx
+* [IBM Cloud](https://cloud.ibm.com)
+* [watsonx Assistant](https://developer.ibm.com/components/watson-assistant/)
 
 ## Credits
 

@@ -1,15 +1,15 @@
-# Getting started with the new Watson Assistant part I: the build guide
+# Getting started with watsonx Assistant part I: the build guide
 
 Chatbots are a great way for you to naturally and efficiently help your customers get stuff done, but most chatbot building tools today are either overly simplistic and break whenever someone asks your bot something unexpected, or focused only on a developer as the bot builder, making it very hard for content-focused individuals to collaborate.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture2-1.png)
 
 We think it’s about time a bot-building tool let anyone build robust AI-powered bots: bots that can automatically handle the craziness of human conversation and scale across a company without breaking.
-That’s why the new Watson Assistant has a build experience tailored to the people who directly interact with customers daily.
+That’s why watsonx Assistant has a build experience tailored to the people who directly interact with customers daily.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture3-1.png)
 
-You don’t have to sacrifice on powerful chatbot features either. The New Watson Assistant will automatically handle all sorts of things that could go wrong during a conversation, such as topic changes, vague requests, misunderstandings, and asking for a human agent.
+You don’t have to sacrifice on powerful chatbot features either. watsonx Assistant will automatically handle all sorts of things that could go wrong during a conversation, such as topic changes, vague requests, misunderstandings, and asking for a human agent.
 In this post, we’ll show you how to create a fully-built action in your new assistant in 30 minutes or less. Here’s what you’ll do:
 
 1. Learn the basics (5 min)
@@ -18,26 +18,30 @@ In this post, we’ll show you how to create a fully-built action in your new as
 4. Preview your assistant (5 min)
 
 ## 1. Learn the basics (5 min)
+
 Actions and steps are the only two things you need to know to build an AI-powered virtual agent.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture4-1.png)
 
 ### What is an action?
+
 An action is a problem or a task that your customer wants to resolve. Anything from paying a bill to getting an invoice to saying hello to asking about the weather could be an action in your assistant.
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture5-1.png)
 
 ### What is a step?
+
 A step is just a back-and-forth interaction between your assistant and your customer.
 Simply put, steps represent the clarification questions, final answers, or human agent handoff points in the action.
 Everything else that the step needs to function like the flow logic, response options, or storage of the user’s response is contained within the structure of the action itself. You no longer need to create separate entities and intents as part of a dialog skill!
 In the example above, the assistant asks clarification questions before handing the conversation over to an agent (with the account number as context) to pay a cable bill, or guides the user to the online billing portal for internet or phone bills.
 
 !!! tip
-    If you’re an existing Watson Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.
+    If you’re an existing watsonx Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.
 
 ## 2. Create your first assistant (5 min)
-When you first launch the new Watson Assistant experience, you’ll be prompted to create your first assistant:
+
+When you first launch the watsonx Assistant experience, you’ll be prompted to create your first assistant:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture8-1.png)
 
@@ -45,6 +49,7 @@ Give it a name that represents the domain of topics you want it to handle. For e
 
 !!! tip
     If you haven’t already thought about what you want your assistant to handle or where it will talk to your customers, check out our post on planning your assistant. You can also take advantage of one of the templates in our catalog for your first assistant. This will dramatically reduce your timeline, as well as teach you the ropes.
+
 From here, you’ll start on the home page of your brand-new assistant:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture9.png)
@@ -56,6 +61,7 @@ In the top right of your screen you’ll also find the Learning center. Click to
 Now it’s time to build your first conversation. Follow along with our example or create your own!
 
 ## 3. Create your first conversation (15 min)
+
 Let’s build out a conversation flow using our billing example from before:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture10-1.png)
@@ -168,7 +174,7 @@ Step 3 should be complete and look like this:
 
 ### Create a final response step
 
-Lastly, add step 4. It should say something like: **To pay your <type of bill> bill, you can head to our online portal <link to portal>**
+Lastly, add step 4. It should say something like: **To pay your \<type of bill\> bill, you can head to our online portal \<link to portal\>**
 
 To insert a variable like the type of bill being paid, click the variable insert button at the top of the text box:
 
@@ -212,6 +218,7 @@ You may notice when testing that the assistant doesn’t correctly recognize eve
     While you’re at it, we recommend naming your action (top left of the image above) with something simple that your customers would recognize. In this case, maybe something like “Pay a bill.”
 
 ## 4. Preview your assistant (5 min)
+
 To see how your assistant would work on one of your channels, head to the preview page:
 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/TBGP1-Preview-Page-1536x916.jpg)
@@ -226,7 +233,6 @@ The embeddable web chat integration is included for you by default, and you can 
 ![](https://www.ibm.com/blog/wp-content/uploads/2021/12/TBGP1-Preview-Page-2-1536x964.jpg)
 
 
-Congrats! You’ve successfully learned all you need to know to get started with the new Watson Assistant. From here, start building out the topics you really care about automating with your customers.
+Congrats! You’ve successfully learned all you need to know to get started with watsonx Assistant. From here, start building out the topics you really care about automating with your customers.
 
 <img src="https://count.asgharlabs.io/count?p=/lab1_chatbot_page">
-
