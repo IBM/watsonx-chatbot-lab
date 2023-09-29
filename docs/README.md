@@ -40,3 +40,5 @@ The introductory page of the workshop is broken down into the following sections
 * Peter Keller
 
 [watsonx]: https://ibm.biz/dev-watsonx
+
+<img src="https://count.asgharlabs.io/count?p=/main_chatbot_page">
