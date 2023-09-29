@@ -1,8 +1,13 @@
+<script data-goatcounter="https://count.asgharlabs.io/count"
+        async src="//count.asgharlabs.io/count.js"></script>
+
 # Introduction
 
 ## watsonx-chatbot-lab
 
-Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx" data-goatcounter-click="counter.asgharlabs.io">watsonx</a> to accomplish building an AI-powered chatbot in less than an hour!
+Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx" 
+                                                  data-goatcounter-click="counter.asgharlabs.io"
+                                                  data-goatcounter-title="Chatbot Lab-generative-ai-for-developers">watsonx</a> to accomplish building an AI-powered chatbot in less than an hour!
 
 The goals of this workshop are:
 
@@ -38,5 +43,3 @@ The introductory page of the workshop is broken down into the following sections
 * James Walsh
 * Blake McGregor
 * Peter Keller
-
-<img src="https://count.asgharlabs.io/count?p=/main_chatbot_page">
