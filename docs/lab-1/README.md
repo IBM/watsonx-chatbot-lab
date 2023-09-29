@@ -227,3 +227,6 @@ The embeddable web chat integration is included for you by default, and you can 
 
 
 Congrats! You’ve successfully learned all you need to know to get started with the new Watson Assistant. From here, start building out the topics you really care about automating with your customers.
+
+<img src="https://count.asgharlabs.io/count?p=/lab1_chatbot_page">
+

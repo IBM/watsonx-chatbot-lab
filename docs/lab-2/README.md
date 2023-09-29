@@ -171,3 +171,6 @@ The other optional task in the Task Tracker is to **Refine the assistant based o
 ### Conclusion
 
 You’ve worked through two important steps toward getting your first assistant live. You spent under 30 minutes setting up your basic assistant, and another 30 minutes expanding on it. You now have a trusted ally that can handle multiple customer requests, and you’ve streamlined important aspects of your customer service flow. The only limit now is the sky.
+
+<img src="https://count.asgharlabs.io/count?p=/lab2_chatbot_page">
+

@@ -108,3 +108,6 @@ Not only is your assistant now live and ready to start answering customers’ qu
 
 You now have a virtual agent live on your website, built, tested, and deployed in less than an hour!
 As great as this first version of your assistant is, you’ve only scratched the surface of what it can do.
+
+<img src="https://count.asgharlabs.io/count?p=/lab3_chatbot_page">
+
