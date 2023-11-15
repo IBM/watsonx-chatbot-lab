@@ -1,6 +1,6 @@
 # Introduction
 
-## watsonx-chatbot-lab
+## Build an AI-powered chatbot with wastonx
 
 Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx" 
                                                   data-goatcounter-click="counter.asgharlabs.io"
