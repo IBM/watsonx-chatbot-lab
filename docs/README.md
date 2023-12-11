@@ -1,8 +1,14 @@
+---
+title: Build an AI-powered Chatbot with watsonx
+description: An overview watsonx and watsonx Assistant
+logo: docs/images/ibm-blue-background.png
+---
+
 # Introduction
 
 ## Build an AI-powered chatbot with wastonx
 
-Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx" 
+Welcome to our lab! In this lab, we'll be using <a href="https://ibm.biz/dev-watsonx"
                                                   data-goatcounter-click="counter.asgharlabs.io"
                                                   data-goatcounter-title="Chatbot Lab-generative-ai-for-developers">watsonx</a> to accomplish building an AI-powered chatbot in less than an hour!
 

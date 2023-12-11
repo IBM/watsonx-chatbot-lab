@@ -1,3 +1,9 @@
+---
+title: Deploying watsonx assistant
+description: Lab-3 Deploying your watsonx assistant
+logo: docs/images/ibm-blue-background.png
+---
+
 # Deploying watsonx assistant
 
 You built your first action with watsonx Assistant in Lab 1, then refined your content in Lab 2. Now let’s learn how to test your assistant and deploy it on your website!

@@ -1,3 +1,8 @@
+---
+title: Refinining your watsonx assistant
+description: Lab-2 with watsonx and watsonx Assistant
+logo: docs/images/ibm-blue-background.png
+---
 # Refining your watsonx assistant
 
 Before we go into all the ways to refine your first assistant, take a moment to congratulate yourself! You did it, and you finished in record time. Who would have thought that a virtual assistant capable of helping customers pay their bills or reach a live agent could be launched in under 30 minutes?

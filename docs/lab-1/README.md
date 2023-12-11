@@ -1,6 +1,6 @@
 ---
 title: Getting started with wastsonx Assistant
-description: Starting setup with watsonx and watsonx Assistant
+description: Lab 1 and setup with watsonx and watsonx Assistant
 logo: docs/images/ibm-blue-background.png
 ---
 # Getting started with watsonx Assistant part I: the build guide
