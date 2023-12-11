@@ -51,10 +51,7 @@ theme:
 # Plugins
 plugins:
   - search
-  - social:
-      cards_layout_options:
-        title: watsonx Chatbot Lab
-        description: Learn how to build a watsonx based Chat Bot in less then an hour!
+  - social
 
 
 # Customization

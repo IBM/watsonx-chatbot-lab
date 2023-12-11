@@ -83,3 +83,6 @@ Session.vim
 .netrwhist
 *~
 tags
+
+venv/
+.cache/

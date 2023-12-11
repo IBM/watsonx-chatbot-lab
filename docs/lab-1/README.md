@@ -1,3 +1,8 @@
+---
+title: Getting started with wastsonx Assistant
+description: Starting setup with watsonx and watsonx Assistant
+logo: docs/images/ibm-blue-background.png
+---
 # Getting started with watsonx Assistant part I: the build guide
 
 Chatbots are a great way for you to naturally and efficiently help your customers get stuff done, but most chatbot building tools today are either overly simplistic and break whenever someone asks your bot something unexpected, or focused only on a developer as the bot builder, making it very hard for content-focused individuals to collaborate.
