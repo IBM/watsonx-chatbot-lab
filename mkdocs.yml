@@ -51,6 +51,11 @@ theme:
 # Plugins
 plugins:
   - search
+  - social:
+    cards_layout_options:
+      title: watsonx Chatbot Lab
+      description: In this lab, we'll be using watsonx to accomplish building an AI-powered chatbot in less than an hour!
+
 
 # Customization
 extra:
