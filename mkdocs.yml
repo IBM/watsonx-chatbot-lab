@@ -51,10 +51,7 @@ theme:
 # Plugins
 plugins:
   - search
-  - social:
-    cards_layout_options:
-      title: watsonx Chatbot Lab
-      description: In this lab, we'll be using watsonx to accomplish building an AI-powered chatbot in less than an hour!
+  - social
 
 
 # Customization
@@ -89,8 +86,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
