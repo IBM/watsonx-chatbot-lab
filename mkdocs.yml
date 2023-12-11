@@ -40,6 +40,7 @@ theme:
     code: IBM Plex Mono
   icon:
     logo: material/library
+  logo: images/ibm-blue-background.png
   features:
     - navigation.tabs
     #- navigation.instant
