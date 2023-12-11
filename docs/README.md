@@ -1,7 +1,7 @@
 ---
 title: Build an AI-powered Chatbot with watsonx
 description: An overview watsonx and watsonx Assistant
-logo: docs/images/ibm-blue-background.png
+logo: images/ibm-blue-background.png
 ---
 
 # Introduction

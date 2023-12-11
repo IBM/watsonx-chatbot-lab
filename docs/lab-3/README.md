@@ -1,7 +1,7 @@
 ---
 title: Deploying watsonx assistant
 description: Lab-3 Deploying your watsonx assistant
-logo: docs/images/ibm-blue-background.png
+logo: images/ibm-blue-background.png
 ---
 
 # Deploying watsonx assistant

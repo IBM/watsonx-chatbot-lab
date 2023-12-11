@@ -1,7 +1,7 @@
 ---
 title: Refinining your watsonx assistant
 description: Lab-2 with watsonx and watsonx Assistant
-logo: docs/images/ibm-blue-background.png
+logo: images/ibm-blue-background.png
 ---
 # Refining your watsonx assistant
 
