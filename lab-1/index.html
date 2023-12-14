@@ -1,0 +1,1248 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Lab 1 and setup with watsonx and watsonx Assistant">
+      
+      
+        <meta name="author" content="IBM Developer">
+      
+      
+        <link rel="canonical" href="https://ibm.github.io/watsonx-chatbot-lab/lab-1/">
+      
+      
+        <link rel="prev" href="../pre-work/">
+      
+      
+        <link rel="next" href="../lab-2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Getting started with wastsonx Assistant - watsonx-chatbot-lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Getting started with wastsonx Assistant - watsonx-chatbot-lab" >
+      
+        <meta  property="og:description"  content="Lab 1 and setup with watsonx and watsonx Assistant" >
+      
+        <meta  property="og:image"  content="https://ibm.github.io/watsonx-chatbot-lab/assets/images/social/lab-1/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://ibm.github.io/watsonx-chatbot-lab/lab-1/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Getting started with wastsonx Assistant - watsonx-chatbot-lab" >
+      
+        <meta  name="twitter:description"  content="Lab 1 and setup with watsonx and watsonx Assistant" >
+      
+        <meta  name="twitter:image"  content="https://ibm.github.io/watsonx-chatbot-lab/assets/images/social/lab-1/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started-with-watsonx-assistant-part-i-the-build-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="watsonx-chatbot-lab" class="md-header__button md-logo" aria-label="watsonx-chatbot-lab" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            watsonx-chatbot-lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting started with wastsonx Assistant
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibm/watsonx-chatbot-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    watsonx-chatbot-lab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../pre-work/" class="md-tabs__link">
+          
+  
+  Workshop
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../resources/RESOURCES/" class="md-tabs__link">
+          
+  
+  References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="watsonx-chatbot-lab" class="md-nav__button md-logo" aria-label="watsonx-chatbot-lab" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    watsonx-chatbot-lab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibm/watsonx-chatbot-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    watsonx-chatbot-lab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Workshop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Workshop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 0. Pre-work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab 1. Basic watsonx assistant
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lab 1. Basic watsonx assistant
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-learn-the-basics-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Learn the basics (5 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Learn the basics (5 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an action?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a step?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-your-first-assistant-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create your first assistant (5 min)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-your-first-conversation-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create your first conversation (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Create your first conversation (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first action
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-your-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview your action
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-another-clarification-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create another clarification step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-agent-handoff-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an agent handoff step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-final-response-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a final response step
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-preview-your-assistant-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Preview your assistant (5 min)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 2. Refining watsonx assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 3. Deploying watsonx assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/ADMIN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-learn-the-basics-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Learn the basics (5 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Learn the basics (5 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an action?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a step?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-your-first-assistant-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create your first assistant (5 min)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-your-first-conversation-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create your first conversation (15 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Create your first conversation (15 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first action
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-first-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-your-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview your action
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-another-clarification-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create another clarification step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-agent-handoff-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an agent handoff step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-final-response-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a final response step
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-preview-your-assistant-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Preview your assistant (5 min)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="getting-started-with-watsonx-assistant-part-i-the-build-guide">Getting started with watsonx Assistant part I: the build guide<a class="headerlink" href="#getting-started-with-watsonx-assistant-part-i-the-build-guide" title="Permanent link">&para;</a></h1>
+<p>Chatbots are a great way for you to naturally and efficiently help your customers get stuff done, but most chatbot building tools today are either overly simplistic and break whenever someone asks your bot something unexpected, or focused only on a developer as the bot builder, making it very hard for content-focused individuals to collaborate.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture2-1.png" /></p>
+<p>We think it’s about time a bot-building tool let anyone build robust AI-powered bots: bots that can automatically handle the craziness of human conversation and scale across a company without breaking.
+That’s why watsonx Assistant has a build experience tailored to the people who directly interact with customers daily.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture3-1.png" /></p>
+<p>You don’t have to sacrifice on powerful chatbot features either. watsonx Assistant will automatically handle all sorts of things that could go wrong during a conversation, such as topic changes, vague requests, misunderstandings, and asking for a human agent.
+In this post, we’ll show you how to create a fully-built action in your new assistant in 30 minutes or less. Here’s what you’ll do:</p>
+<ol>
+<li>Learn the basics (5 min)</li>
+<li>Create your first assistant (5 min)</li>
+<li>Create your first conversation (15 min)</li>
+<li>Preview your assistant (5 min)</li>
+</ol>
+<h2 id="1-learn-the-basics-5-min">1. Learn the basics (5 min)<a class="headerlink" href="#1-learn-the-basics-5-min" title="Permanent link">&para;</a></h2>
+<p>Actions and steps are the only two things you need to know to build an AI-powered virtual agent.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture4-1.png" /></p>
+<h3 id="what-is-an-action">What is an action?<a class="headerlink" href="#what-is-an-action" title="Permanent link">&para;</a></h3>
+<p>An action is a problem or a task that your customer wants to resolve. Anything from paying a bill to getting an invoice to saying hello to asking about the weather could be an action in your assistant.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture5-1.png" /></p>
+<h3 id="what-is-a-step">What is a step?<a class="headerlink" href="#what-is-a-step" title="Permanent link">&para;</a></h3>
+<p>A step is just a back-and-forth interaction between your assistant and your customer.
+Simply put, steps represent the clarification questions, final answers, or human agent handoff points in the action.
+Everything else that the step needs to function like the flow logic, response options, or storage of the user’s response is contained within the structure of the action itself. You no longer need to create separate entities and intents as part of a dialog skill!
+In the example above, the assistant asks clarification questions before handing the conversation over to an agent (with the account number as context) to pay a cable bill, or guides the user to the online billing portal for internet or phone bills.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you’re an existing watsonx Assistant customer, we have a convenient way for you to use dialog and actions together in the new product experience by downloading and migrating your dialog skills! You can do this gradually over time to gain the advantages of important new features in actions while maintaining the work you’ve built into your classic assistant.</p>
+</div>
+<h2 id="2-create-your-first-assistant-5-min">2. Create your first assistant (5 min)<a class="headerlink" href="#2-create-your-first-assistant-5-min" title="Permanent link">&para;</a></h2>
+<p>When you first launch the watsonx Assistant experience, you’ll be prompted to create your first assistant:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture8-1.png" /></p>
+<p>Give it a name that represents the domain of topics you want it to handle. For example, if you are building an assistant to handle support questions in your billing department, you might start by calling it the “Billing Assistant.” Choose what language you want it to speak before continuing. Watson Assistant can handle virtually any global language.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you haven’t already thought about what you want your assistant to handle or where it will talk to your customers, check out our post on planning your assistant. You can also take advantage of one of the templates in our catalog for your first assistant. This will dramatically reduce your timeline, as well as teach you the ropes.</p>
+</div>
+<p>From here, you’ll start on the home page of your brand-new assistant:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture9.png" /></p>
+<p>You’ve already done the first two steps, so take a moment to check out what’s on your screen. Each section is organized with progress bars so you can see what you’ve done and how far you have to go.</p>
+<p>In the top right of your screen you’ll also find the Learning center. Click to expand and open the menu items to find tours, shortcuts to useful content, and more. All of this is aimed at getting you up and running as quickly as possible, so be sure to explore.</p>
+<p>Now it’s time to build your first conversation. Follow along with our example or create your own!</p>
+<h2 id="3-create-your-first-conversation-15-min">3. Create your first conversation (15 min)<a class="headerlink" href="#3-create-your-first-conversation-15-min" title="Permanent link">&para;</a></h2>
+<p>Let’s build out a conversation flow using our billing example from before:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture10-1.png" /></p>
+<p>For an internet or phone bill, the customer will be sent to the online billing portal.</p>
+<p>For cable bills, our fictional company’s policy dictates that a human agent has to take payment. In this case, the assistant needs to get the customer’s account number first to speed things up with the human agent.</p>
+<p>Let’s build it!</p>
+<h3 id="create-your-first-action">Create your first action<a class="headerlink" href="#create-your-first-action" title="Permanent link">&para;</a></h3>
+<p>Start by creating your first action. Remember that actions represent the topics your assistant can handle, such as “pay bill.”</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You will be prompted to create your first action from scratch or from a template. To follow along with our example you’ll want to choose the first option, but we definitely recommend exploring the templates at your disposal as you build out your proof of concept. You’ll find a number of options that are customer-ready, or that can expand on your first assistant’s abilities.</p>
+</div>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture11-1.png" /></p>
+<h3 id="create-your-first-example">Create your first example<a class="headerlink" href="#create-your-first-example" title="Permanent link">&para;</a></h3>
+<p>You need to “train” your assistant’s topic-recognition AI by giving it some example sentences. Start with the first one here, something like: I want to pay my cable bill please.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture12.png" /></p>
+<h3 id="create-your-first-step">Create your first step<a class="headerlink" href="#create-your-first-step" title="Permanent link">&para;</a></h3>
+<p>Now it’s time to create the first step in the bill pay interaction. We’ll start with the clarification question around the customer’s account type:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture13.jpg" /></p>
+<p>Step 1 was already created for you, so move to it and add the clarification question in the Assistant says text box. Something along the lines of: <strong>What type of account are we talking here?</strong></p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture14.png" /></p>
+<p>Then, select the type of customer response the assistant should wait for. In this case, options are the best choice. Add the three options for Cable, Internet, and Phone, and apply your changes.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture15.png" /></p>
+<p>Your first step should ultimately look something like this:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture16.png" /></p>
+<h3 id="preview-your-action">Preview your action<a class="headerlink" href="#preview-your-action" title="Permanent link">&para;</a></h3>
+<p>Now preview your action to make sure it works. To do this, hit the preview button in the bottom right corner of your screen. Try out a few interactions and see that it properly recognizes what you ask it. Try typing something other than your earlier training sentence.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture17.png" /></p>
+<h3 id="create-another-clarification-step">Create another clarification step<a class="headerlink" href="#create-another-clarification-step" title="Permanent link">&para;</a></h3>
+<p>With your first step created and tested, let’s finish this action by creating another step. As a reminder, we still need to build steps 2, 3, and 4:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture18.png" /></p>
+<p>Let’s add step 2 next. Add a new step below step 1:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture19.png" /></p>
+<p>Next, add the clarification question asking for the account number. Something like: <strong>What’s your account number?</strong></p>
+<p>After you’ve done that, you need to tell the assistant to look for a number in response to the question. From the response dropdown list, choose <strong>number</strong>:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture20.png" /></p>
+<p>Next, you need to add some flow logic. Remember, given the way this flow works, an account number should only be gathered in the case of a cable bill. To handle this scenario, you need to add a condition to your step. To do that, change the step to be taken <strong>with conditions</strong> instead of <strong>without</strong>:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture21.png" /></p>
+<p>Conditions are requirements which must be met for the step to be triggered. In this case, we want to condition on the answer to step 1 being <strong>Cable</strong> but not <strong>Internet</strong> or <strong>Phone</strong>. Setting this up is easy. Just make sure you have the condition set to step <strong>1 is Cable</strong>:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture22.png" /></p>
+<p>Once you’re finished setting the condition, your action should look something like this:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture23.png" /></p>
+<h3 id="create-an-agent-handoff-step">Create an agent handoff step<a class="headerlink" href="#create-an-agent-handoff-step" title="Permanent link">&para;</a></h3>
+<p>You’re almost finished building this action! We just need to add steps 3 and 4, each of which provide the final outcome for the user:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture24.png" /></p>
+<p>Let’s start with step 3. Add it below step 2 and add some text related to getting the user to an agent to pay their bill. Something like: <strong>Let me get you to an agent who can help you pay your cable bill!</strong></p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture25.png" /></p>
+<p>Next, condition this step on step <strong>1 is Cable</strong> just like you did in step 2:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture26.png" /></p>
+<p>Finally, for this step, we don’t need to gather any information from the user, so you can leave the <strong>define customer response</strong> section empty.</p>
+<p>We should, however, set up the assistant to route this conversation to a human agent. To add that, change the <strong>and then</strong> setting to connect to a human agent (which will also end the action when it hands off):</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture27.png" /></p>
+<p>In the prompt that comes up, you should insert the context that you gathered for the human agent to review. Namely, the fact that the customer wants to pay their cable bill as well as the account number.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To insert the information To insert information you’ve collected into text, start with the <strong>$</strong> sign, and a quick select box should appear like this:</p>
+</div>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture28.png" /></p>
+<p>Select step 2 (the account number) as the field you want to insert and apply your changes.</p>
+<p>Step 3 should be complete and look like this:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture29.png" /></p>
+<h3 id="create-a-final-response-step">Create a final response step<a class="headerlink" href="#create-a-final-response-step" title="Permanent link">&para;</a></h3>
+<p>Lastly, add step 4. It should say something like: <strong>To pay your \&lt;type of bill&gt; bill, you can head to our online portal \&lt;link to portal&gt;</strong></p>
+<p>To insert a variable like the type of bill being paid, click the variable insert button at the top of the text box:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture30.png" /></p>
+<p>And to add a link to the text, highlight the text you want to use and then click the link button:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture31.png" /></p>
+<p>The settings for the link should look something like this:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture32.png" /></p>
+<p>Next, make sure this step only fires for an internet or phone bill. To do that, create a condition for <strong>step 1 is Internet</strong>. Then add another condition for <strong>step 1 is Phone</strong>. When you do this, be sure that the step looks for <strong>any</strong> of these conditions to be met and not <strong>all</strong> of them:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture33.png" /></p>
+<p>Finally, make sure the action ends after this step is reached. To do that, change the <strong>And then</strong> setting to <strong>End the action</strong>.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture34.png" /></p>
+<p>Test the whole action
+Boom! Your steps should now be complete and look like this.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture35.png" /></p>
+<p>Now for the fun part, let’s try it out!</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture36.png" /></p>
+<p>Try a few scenarios where you state the type of bill up front. Notice how the assistant skips that question and moves immediately to the next step.</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture37.png" /></p>
+<p>Add some more examples
+You may notice when testing that the assistant doesn’t correctly recognize everything you ask it. To address this, you need to train the AI with more than just one example sentence. Simply move to the top of the action in the customer starts with section and add four more varied sentences:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/Picture38.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While you’re at it, we recommend naming your action (top left of the image above) with something simple that your customers would recognize. In this case, maybe something like “Pay a bill.”</p>
+</div>
+<h2 id="4-preview-your-assistant-5-min">4. Preview your assistant (5 min)<a class="headerlink" href="#4-preview-your-assistant-5-min" title="Permanent link">&para;</a></h2>
+<p>To see how your assistant would work on one of your channels, head to the preview page:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/TBGP1-Preview-Page-1536x916.jpg" /></p>
+<p>This page is a representation of your “draft” work in progress. It has an inline preview for you to test. You can also share your work with others on your team quickly with a shareable URL:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/TBGP1-Preview-Page-1-1536x916.jpg" /></p>
+<p>Simply click that button to copy the URL to your clipboard, then paste it into any messaging service to share your draft with members of your team.
+The embeddable web chat integration is included for you by default, and you can go to the integration catalog to add any other channels to your assistant, such as phone integration:</p>
+<p><img alt="" src="https://www.ibm.com/blog/wp-content/uploads/2021/12/TBGP1-Preview-Page-2-1536x964.jpg" /></p>
+<p>Congrats! You’ve successfully learned all you need to know to get started with watsonx Assistant. From here, start building out the topics you really care about automating with your customers.</p>
+<p><img src="https://count.asgharlabs.io/count?p=/lab1_chatbot_page"></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 IBM Developer
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ibm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ibmdeveloper" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ibm/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/user/developerworks" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/ibmdeveloper" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://count.asgharlabs.io/count.js"></script>
+      
+    
+  </body>
+</html>
